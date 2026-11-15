@@ -39,7 +39,7 @@
           <li><a class="nav-link" href="#about">About</a></li>
           <li><a class="nav-link" href="#skills">Skills</a></li>
           <li><a class="nav-link" href="#projects">Projects</a></li>
-          <li><a class="nav-link nav-contact" href="#contact">My profile <span aria-hidden="true">↗</span></a></li>
+          <li><a class="nav-link nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a></li>
         </ul>
       </nav>
     </header>
@@ -160,57 +160,63 @@
         <div class="container">
           <div class="projects-heading">
             <div class="section-heading">
-              <p class="eyebrow">03 / Areas of interest</p>
-              <h2 id="projects-title">What I’m working toward<span>.</span></h2>
+              <p class="eyebrow">03 / Selected projects</p>
+              <h2 id="projects-title">Projects I’ve built<span>.</span></h2>
             </div>
-            <p>Building a foundation across web, backend, and data technologies.</p>
+            <p>A selection of projects and the technologies behind them.</p>
           </div>
-          <div class="projects-grid">
-            <article class="project-card project-card-featured">
-              <a class="project-visual visual-orbit" href="#skills" aria-label="Explore backend development technologies">
-                <span class="visual-caption">BACKEND / APIS</span>
-                <span class="orbit-ring orbit-ring-one"></span>
-                <span class="orbit-ring orbit-ring-two"></span>
-                <span class="orbit-core">o</span>
-                <span class="orbit-planet"></span>
-                <span class="visual-arrow" aria-hidden="true">↗</span>
-              </a>
-              <div class="project-info">
-                <div><h3>Backend development</h3><p>Python, FastAPI, SQL, and MySQL.</p></div>
-                <span class="project-year">01</span>
-              </div>
-            </article>
-            <article class="project-card">
-              <a class="project-visual visual-fieldnotes" href="#skills" aria-label="Explore web development technologies">
-                <span class="visual-caption">WEB / DEVELOPMENT</span>
-                <span class="fieldnotes-paper">
-                  <span class="paper-kicker">BUILDING WITH</span>
-                  <span class="paper-title">web<br />technologies.</span>
-                  <span class="paper-line"></span>
-                  <span class="paper-stamp">HTML—JS</span>
-                </span>
-                <span class="visual-arrow" aria-hidden="true">↗</span>
-              </a>
-              <div class="project-info">
-                <div><h3>Web development</h3><p>HTML, CSS, and JavaScript.</p></div>
-                <span class="project-year">02</span>
-              </div>
-            </article>
+          <div class="projects-grid" id="projects-grid" aria-live="polite">
+            <p class="projects-state" role="status">Loading projects...</p>
           </div>
         </div>
       </section>
 
-      <!-- Contact invitation -->
+      <!-- Contact form -->
       <section class="section section-contact" id="contact" aria-labelledby="contact-title">
         <div class="container contact-panel">
           <div class="contact-orb" aria-hidden="true"><span>✳</span></div>
-          <p class="eyebrow">04 / Get to know me</p>
-          <h2 id="contact-title">Let’s build a future<br />in <span>software</span>?</h2>
-          <p>B.Tech student in Computer Science and Engineering (AI &amp; ML), based in Odisha, India.</p>
-          <a class="button button-light" href="#skills">
-            Explore my skills <span aria-hidden="true">↗</span>
-          </a>
-          <span class="contact-email">Python · FastAPI · MySQL</span>
+          <p class="eyebrow">04 / Get in touch</p>
+          <h2 id="contact-title">Let’s work<br />together<span>.</span></h2>
+          <p class="contact-description">
+            Have a project in mind or want to connect? Send me a message.
+          </p>
+          <form class="contact-form" id="contact-form">
+            <div class="contact-fields">
+              <div class="contact-field">
+                <label for="contact-name">Full Name</label>
+                <input
+                  id="contact-name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <div class="contact-field">
+                <label for="contact-email">Email Address</label>
+                <input
+                  id="contact-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+              <div class="contact-field contact-field-wide">
+                <label for="contact-subject">Subject</label>
+                <input id="contact-subject" name="subject" type="text" required />
+              </div>
+              <div class="contact-field contact-field-wide">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" name="message" rows="5" required></textarea>
+              </div>
+            </div>
+            <button class="button button-light contact-submit" type="submit">
+              <span class="contact-submit-label">Send Message</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+            <p class="contact-form-status" role="status" hidden></p>
+          </form>
         </div>
       </section>
     </main>
